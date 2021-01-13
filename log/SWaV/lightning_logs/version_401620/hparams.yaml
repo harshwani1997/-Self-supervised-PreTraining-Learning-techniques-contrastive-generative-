@@ -1,0 +1,50 @@
+arch: resnet18
+batch_size: 1024
+crops_for_assign:
+- 0
+- 1
+data_dir: /scratch/sgt287/data
+dataset: stl10
+epoch_queue_starts: 15
+epsilon: 0.05
+exclude_bn_bias: false
+fast_dev_run: false
+feat_dim: 128
+final_lr: 1.0e-06
+first_conv: true
+fp32: false
+freeze_prototypes_epochs: 1
+gaussian_blur: false
+gpus: 2
+hidden_mlp: 2048
+jitter_strength: 1.0
+lars_wrapper: false
+learning_rate: 0.001
+max_epochs: 100
+max_scale_crops:
+- 1
+- 0.33
+max_steps: -1
+maxpool1: false
+min_scale_crops:
+- 0.33
+- 0.1
+nmb_crops:
+- 2
+- 4
+nmb_prototypes: 512
+nodes: 1
+num_samples: 95000
+num_workers: 8
+online_ft: false
+optimizer: adam
+queue_length: 0
+queue_path: queue
+sinkhorn_iterations: 3
+size_crops:
+- 96
+- 36
+start_lr: 0
+temperature: 0.1
+warmup_epochs: 10
+weight_decay: 1.0e-06
